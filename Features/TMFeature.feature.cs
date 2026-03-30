@@ -105,6 +105,18 @@ namespace ReqnrollTurnUpPortal.Features
             await testRunner.CollectScenarioErrorsAsync();
         }
         
+        public virtual async global::System.Threading.Tasks.Task FeatureBackgroundAsync()
+        {
+#line 8
+#line hidden
+#line 9
+ await testRunner.GivenAsync("I logged into Turnup portal successfully", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 10
+ await testRunner.AndAsync("I nevigate to the time and material page", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+        }
+        
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
         {
             return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/TMFeature.feature.ndjson", 6);
@@ -126,7 +138,7 @@ namespace ReqnrollTurnUpPortal.Features
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Create new time and material record with valid data", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 8
+#line 13
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -136,16 +148,13 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 9
- await testRunner.GivenAsync("I logged into Turnup portal successfully", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 8
+await this.FeatureBackgroundAsync();
 #line hidden
-#line 10
- await testRunner.AndAsync("I nevigate to the time and material page", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 11
+#line 14
  await testRunner.WhenAsync("I crete a new time and material record", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 12
+#line 15
  await testRunner.ThenAsync("The record should be created successfully", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -167,7 +176,7 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("edit existing time record with valid data", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 15
+#line 18
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -177,16 +186,13 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 16
- await testRunner.GivenAsync("I logged into Turnup portal successfully", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 17
- await testRunner.AndAsync("I nevigate to the time and material page", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 18
- await testRunner.WhenAsync(string.Format("I update the \'{0}\' and \'{1}\' on an existing Time record", code, description), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line 8
+await this.FeatureBackgroundAsync();
 #line hidden
 #line 19
+ await testRunner.WhenAsync(string.Format("I update the \'{0}\' and \'{1}\' on an existing Time record", code, description), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 20
  await testRunner.ThenAsync(string.Format("the record should have the updated \'{0}\' and \'{1}\'", code, description), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }

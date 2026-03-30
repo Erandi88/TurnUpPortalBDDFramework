@@ -71,13 +71,13 @@ namespace ReqnrollTurnUpPortal.StepDefinitions
             //Assert.That(newPrice == "17", "Actual Price and expected Price do not match.");
         }
 
-        [When("I update the {string} and {string} on an existing Time record")]
+        [When(@"I update the '([^']*)' and '([^']*)' on an existing Time record")]
         public void WhenIUpdateTheAndOnAnExistingTimeRecord(string code, string description)
         {
             tmPageObj.EditTimeAndMaterialRecord(driver, code, description);
         }
 
-        [Then("the record should have the updated {string} and {string}")]
+        [Then(@"the record should have the updated '([^']*)' and '([^']*)'")]
         public void ThenTheRecordShouldHaveTheUpdatedAnd(string code, string description)
         {
             string editedCode = tmPageObj.GetEditedCode(driver);
