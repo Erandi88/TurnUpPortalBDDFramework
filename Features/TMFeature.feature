@@ -24,3 +24,8 @@ Scenario Outline: edit existing time record with valid data
 	| Industry Connect | Laptop      |
 	| TA Job Ready     | Mouse       |
 	| EditedRecord     | Keyboard    |
+
+
+Scenario: delete existing time record
+	When I delete an existing record
+	Then the record should not be present on the table
